@@ -5,7 +5,7 @@ import Product from '../Product/Product';
 const Products = () => {
     const [products,setProducts] =useState([]);
     useEffect(()=>{
-        fetch('./products.json')
+        fetch('https://stormy-journey-22833.herokuapp.com/addProduct')
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])

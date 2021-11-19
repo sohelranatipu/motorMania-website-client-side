@@ -8,7 +8,7 @@ const MyOrder = () => {
     const [orders,setOrders] = useState([]);
 
     useEffect(()=> {
-        const url =`http://localhost:5000/placeOrder?email=${user.email}`
+        const url =`https://stormy-journey-22833.herokuapp.com/placeOrder?email=${user.email}`
         fetch(url)
         .then(res => res.json())
         .then(data=> setOrders(data))
@@ -17,6 +17,15 @@ const MyOrder = () => {
         <div>
             <h3>My All Orders:{orders.length}</h3>
             <Table striped bordered hover>
+            <thead>
+                    <tr>
+                     
+                    <th>Your Name</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Status</th>
+                    </tr>
+            </thead>
                 {
                     orders.map(order => <Orders order={order}></Orders>)
                 }

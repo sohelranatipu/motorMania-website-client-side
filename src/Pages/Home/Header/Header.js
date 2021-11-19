@@ -10,7 +10,7 @@ const Header = () => {
         <div>
              <Navbar className="header py-3 " collapseOnSelect expand="md" bg="dark" variant="dark" sticky="top">
                 <Container>
-                <Navbar.Brand href as={Link} to="/home">TravelHub</Navbar.Brand>
+                <Navbar.Brand href as={Link} to="/home">MotorMania</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                     <Nav className="ms-auto">
@@ -19,13 +19,18 @@ const Header = () => {
                     
                     {/* <Nav.Link as={Link} to="/myPackages">My Packages</Nav.Link> */}
                     {/* <Nav.Link as={Link} to="/managePackages">Manage Packages</Nav.Link> */}
+
+                     
+
                     { user.email &&
-                    
+                    <>
+                        <Nav.Link as={Link} to="/addProduct">Add Product</Nav.Link>
                         <DropdownButton  style={{margin:'0 10px'}} as={ButtonGroup} title="DashBoard" id="bg-nested-dropdown">
                         <Dropdown.Item style={{color:'black'}} eventKey="1"><Nav.Link as={Link} style={{color:'black'}} to="/pay">Pay</Nav.Link></Dropdown.Item>
                         <Dropdown.Item  eventKey="2"><Nav.Link as={Link} style={{color:'black'}} to="/myOrder">My Orders</Nav.Link></Dropdown.Item>
                         <Dropdown.Item style={{color:'black'}} eventKey="3"><Nav.Link as={Link} style={{color:'black'}} to="/review">Review</Nav.Link></Dropdown.Item>
                       </DropdownButton>
+                      </>
                       
                     }
 

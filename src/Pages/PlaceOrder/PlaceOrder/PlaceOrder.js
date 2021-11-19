@@ -20,7 +20,7 @@ const PlaceOrder = () => {
         const newOrder = {name,address,phone,email};
         console.log(newOrder);
 
-        fetch('http://localhost:5000/placeOrder',{
+        fetch('https://stormy-journey-22833.herokuapp.com/placeOrder',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
